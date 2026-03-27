@@ -1,0 +1,19 @@
+name: mechanism
+
+on:
+  push:
+
+jobs:
+  foundation:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        company: ["laughter", "choke", "define", "favour", "correspondent"]
+        expert: ["gymnasium", "confidence", "candidate", "portable"]
+    steps:
+    - uses: actions/checkout@v6
+    - uses: actions/setup-java@v5
+      with:
+        distribution: 'zulu'
+        java-version: '25'
+    - run: java --enable-native-access=ALL-UNNAMED -jar kq.jar
